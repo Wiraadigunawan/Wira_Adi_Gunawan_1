@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Wira Adi Gunawan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --accent-color: #3498db;
+        --bg-light: #f9fafa;
+        --text-dark: #2d3436;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg-light);
+        color: var(--text-dark);
+      }
+
+      header {
+        background: var(--primary-color);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 4px solid white;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 850px;
+        margin: auto;
+      }
+
+      h2 {
+        color: var(--primary-color);
+      }
+
+      .skills span,
+      .projects li {
+        display: inline-block;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .project-card {
+        background: white;
+        border-left: 5px solid var(--primary-color);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .project-link {
+        display: inline-block;
+        margin-top: 0.8rem;
+        color: #fff;
+        background: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .project-link:hover {
+        background: var(--accent-color);
+      }
+
+      footer {
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header data-aos="fade-down">
+      <img src="profile_wiraadi.jpg" alt="Foto Profil Wira Adi Gunawan" />
+      <h1>Wira Adi Gunawan</h1>
+      <p>Front-End Developer | Creative Tech Enthusiast</p>
+    </header>
+
+    <section>
+      <h2 data-aos="fade-right">Tentang Saya</h2>
+      <p data-aos="fade-up">
+        Lulusan Teknik Informatika dengan minat di bidang front-end development, internet of things, dan pembuatan konten berbasis teknologi. Suka menggabungkan coding dan kreativitas untuk menciptakan solusi digital yang menarik dan
+        fungsional.
+      </p>
+
+      <h2 data-aos="fade-right">Keahlian</h2>
+      <div class="skills" data-aos="zoom-in">
+        <span>HTML Basic</span>
+        <span>CSS Basic</span>
+        <span>Canva</span>
+        <span>Figma</span>
+        <span>Google Sheets</span>
+        <span>Capcut</span>
+        <span>CorelDraw</span>
+      </div>
+
+      <h2 data-aos="fade-right">Proyek</h2>
+      <div class="projects" data-aos="fade-up">
+        <div class="project-card">
+          <h3>Tugas Akhir: Prototipe Pengatur Suhu Kandang</h3>
+          <p>Sistem IoT berbasis NodeMCU ESP8266, sensor DHT11, dan bot Telegram untuk mengatur suhu kandang ayam secara otomatis. Dirancang untuk meningkatkan kesehatan ayam dan efisiensi pemeliharaan.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/hoFzwAe0FLg" title="Video Tugas Akhir Wira" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Analytics & Software Development with AI</h3>
+          <p>
+            Proyek kolaborasi dalam program Kampus Merdeka sebagai Data Analyst & Front-End Developer. Aplikasi menampilkan dashboard interaktif untuk analisis performa bisnis menggunakan Google Sheets, BigQuery, HTML, CSS, dan JavaScript.
+          </p>
+          <a href="https://kampus-merdeka-software-engineering.github.io/km-feb24-balikpapan-21/index.html" target="_blank" class="project-link">🔗 Lihat Proyek</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Website Sayur Kita</h3>
+          <p>Website e-commerce sederhana untuk penjualan sayuran lokal. Dibuat untuk tugas kelompok matkul Pemrograman Web. Saya berperan dalam pembuatan tampilan dan struktur HTML/CSS serta integrasi halaman produk.</p>
+          <a href="https://golive.my.id/web1/sayurkita/" target="_blank" class="project-link">🔗 Lihat Website</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Desain Konten Visual</h3>
+          <p>Kumpulan hasil desain menggunakan Canva. Digunakan untuk kebutuhan presentasi, branding, dan media sosial.</p>
+          <a href="https://www.canva.com/design/DAGjkn2kB3w/v249pHxYj8pfjSceg8SZ9A/edit?utm_content=DAGjkn2kB3w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">🎨 Lihat Desain</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Video & Konten Edukasi</h3>
+          <p>Channel YouTube pribadi tempat saya membagikan hasil karya video editing, dokumentasi tugas kuliah, serta eksperimen konten edukatif dan kreatif.</p>
+          <a href="https://www.youtube.com/@wgec9256/shorts" target="_blank" class="project-link">📺 Lihat di YouTube</a>
+        </div>
+      </div>
+
+      <h2 data-aos="fade-right">Kontak</h2>
+      <p data-aos="fade-up">Email: <a href="mailto:wiraadigunawan22@email.com">wiraadigunawan22@email.com</a></p>
+      <p data-aos="fade-up"><a href="https://www.linkedin.com/in/i-putu-wira-adi-gunawan-19134a307" target="_blank">LinkedIn</a></p>
+    </section>
+
+    <footer data-aos="fade-up">&copy; 2025 Wira Adi Gunawan. All rights reserved.</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
