@@ -10,8 +10,10 @@
       :root {
         --primary-color: #2c3e50;
         --accent-color: #3498db;
-        --bg-light: #f9fafa;
+        --bg-light: #f4f6f8;
         --text-dark: #2d3436;
+        --radius: 12px;
+        --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       }
 
       body {
@@ -20,12 +22,15 @@
         padding: 0;
         background: var(--bg-light);
         color: var(--text-dark);
+        line-height: 1.6;
       }
 
       header {
-        background: var(--primary-color);
+        background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
         color: white;
-        padding: 2rem;
+        padding: 3rem 1rem;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
@@ -40,13 +45,22 @@
       }
 
       section {
+        background: linear-gradient(135deg, #f9fafa, #e3f2fd);
+        background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* pola tech halus */
+        background-repeat: repeat;
+        background-blend-mode: overlay;
         padding: 2rem;
         max-width: 850px;
-        margin: auto;
+        margin: 2rem auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        transition: background 0.3s ease;
       }
 
       h2 {
         color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 600;
       }
 
       .skills span,
@@ -54,36 +68,51 @@
         display: inline-block;
         background: var(--accent-color);
         color: white;
-        padding: 0.5rem 1rem;
-        margin: 0.5rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        margin: 0.4rem;
+        border-radius: var(--radius);
+        font-size: 0.95rem;
+        transition: background 0.3s;
+      }
+
+      .skills span:hover {
+        background: #1f6fb2;
       }
 
       .projects {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 1rem;
+        gap: 1.8rem;
+        margin-top: 1.2rem;
       }
 
       .project-card {
         background: white;
-        border-left: 5px solid var(--primary-color);
+        border-left: 6px solid var(--primary-color);
         padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .project-card:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
       }
 
-      .project-card h3 {
-        margin-top: 0;
-        color: var(--primary-color);
+      .project-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #fff;
+        background: var(--accent-color);
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .project-link:hover {
+        background: #1d5e94;
       }
 
       .video-wrapper {
@@ -91,7 +120,7 @@
         padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 10px;
         margin-top: 1rem;
       }
 
@@ -104,29 +133,14 @@
         border: none;
       }
 
-      .project-link {
-        display: inline-block;
-        margin-top: 0.8rem;
-        color: #fff;
-        background: var(--primary-color);
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-
-      .project-link:hover {
-        background: var(--accent-color);
-      }
-
       footer {
         background: var(--primary-color);
         color: white;
         text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
+        padding: 1.2rem;
+        margin-top: 3rem;
+        font-size: 0.95rem;
       }
-
       a {
         color: var(--accent-color);
         text-decoration: none;
